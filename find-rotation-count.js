@@ -5,7 +5,11 @@ function findRotationCount(arr) {
     while (start <= end) {
       const middleIdx = Math.floor((start + end) / 2);
 
-      if (arr[middleIdx] < arr[middleIdx - 1] && arr[middleIdx] < arr[middleIdx + 1]) {
+      if (arr[start] <= arr[end]) {
+        return start;
+      }
+
+      if (arr[middleIdx] < arr[middleIdx - 1]) {
         return middleIdx;
       }
 
@@ -19,5 +23,4 @@ function findRotationCount(arr) {
     return 0;
 }
 
-
-module.exports = findRotationCount
+module.exports = findRotationCount;

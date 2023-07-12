@@ -13,12 +13,12 @@ function sortedFrequency(arr, target) {
             let first = middleIdx;
             let last = middleIdx;
 
-            while(arr[middleIdx - 1] === target) {
+            while(arr[first - 1] === target) {
                 first--;
             }
 
-            while(arr[middleIdx + 1] === target) {
-                first++;
+            while(arr[last + 1] === target) {
+                last++;
             }
 
             return last - first + 1;

@@ -11,7 +11,7 @@ function findFloor(arr, x) {
         } else if (value < x) {
             start = midIdx + 1;
         } else {
-            end = middle - 1;
+            end = midIdx - 1;
         }
     }
 
